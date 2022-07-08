@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.09);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(196, 4, 4);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.menu, .logo, .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.menu i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: white;
+}
+
+.search {
+    width: 150px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+.search input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 98%;
+    max-width: 1300px;
+    min-height: 100%;
+    padding: 30px 20px;
+}
+
+.manchetes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: white;
+    margin-bottom: 50px;
+}
+
+.texto {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.texto h1 {
+    font-size: 2.7rem;
+    color: rgb(196, 4, 4);
+    margin-bottom: 25px;
+}
+
+.texto p {
+    color: rgb(66, 66, 66);
+    max-width: 500px;
+}
+
+.comunidades {
+    position: absolute;
+    top: 3.4%;
+    font-weight: bold;
+}
+
+.noticias {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia1 {
+    background: url(imgs/fordismo.webp);
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    color: rgb(196, 4, 4);
+    transition: 0.2s;
+}
+
+.noticia1:hover, .noticia2:hover {
+    transform: scale(1.1);
+}
+
+.noticia2 {
+    background: url(imgs/Fordismo.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    color: rgb(196, 4, 4);
+    transition: 0.2s;
+}
+
+.noticia1, .noticia2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.conteudo h1 {
+    text-align: justify;
+    color: rgb(196, 4, 4);
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.text-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content p {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    max-width: 75%;
+}
+
+.text-content img {
+    width: 50%;
+    margin: 20px 0;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 4, 4);
+    color: white;
+    padding: 0 10px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    transform: translate(-100%);
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 4, 4);
+    z-index: 2;
+    padding: 5px;
+    text-align: center;
+}
+
+.open {
+    transform: translate(0);
+}
+
+.menu-mobile ul a {
+    display: block;
+    margin: 45px 0;
+    font-size: 24px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+@media screen and (min-width: 898px) and (max-width: 926px) {
+    .manchetes h1 {
+        font-size: 4vw;
+    }
+
+    .noticia1 h1, .noticia2 h1 {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 898px) {
+    .noticias {
+        display: none;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .manchetes {
+        height: 300px;
+    }
+
+    .manchetes h1 {
+        font-size: 5vw;
+    }
+}

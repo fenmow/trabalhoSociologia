@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3b8b94a692.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Trabalho Notícias</title>
+</head>
+<body>
+    <div class="menu-mobile">
+        <ul>
+            <a href="#">
+                <li>Mais Notícias</li>
+            </a>
+            <a href="#">
+                <li>Sobre</li>
+            </a>
+            <a href="#">
+                <li>Contato</li>
+            </a>
+        </ul>
+    </div>
+    <header>
+        <div class="menu">
+            <a href="#" onclick="showMenu()"><i class="fa-solid fa-bars icon"></i></a>
+            <p>MENU</p>
+        </div>
+        <div class="logo">
+            <h1>G1</h1>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="BUSCAR">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="manchetes">
+            <div class="texto">
+                <p class="comunidades">Novos meios de produção rápida são criados</p>
+                <h1>Novos Sistemas de Produção dominam as fábricas</h1>
+                <p>Fábricas investem em um novo meio de produção que utiliza máquinas e mão de obra barata.</p>
+            </div>
+            <div class="noticias">
+                <div class="noticia1">
+                    <p>'Fábricas em busca de mão de obra barata'</p>
+                    <h1>Fábricas estão em busca de pessoas para trabalhar</h1>
+                </div>
+                <div class="noticia2">
+                    <p>'Uso de máquinas agiliza o processo'</p>
+                    <h1>Fábricas utilizam máquinas para aumentar a produção</h1>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <h1>O que são esses novos métodos?</h1>
+            <div class="text-content">
+                <p>Fábricas adotam novos métodos de produção que buscam a eficiência e agilidade do trabalhador fazendo-o usar seu desempenho máximo na execução do seu trabalho. O trabalhador é monitorado segundo o tempo de produção. Cada indivíduo deve cumprir sua tarefa no menor tempo possível, sendo premiados aqueles que se sobressaem.</p>
+                <img src="imgs/revolucao-industrial-og.webp" alt="">
+                <p>O uso de máquinas revoluciona o modo de produção fazendo o trabalho de um humano sem necessidade de pagamento ou qualquer tipo de descanso.<br>O uso de máquinas irá ajudar na industria textil e automobilística.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Feito por <b>LUCAS PEREIRA DA TURMA 305</b> para o trabalho de <b>SOCIOLOGIA</b></p>
+    </footer>
+</body>
+<script>
+    function showMenu() {
+        var menu = document.querySelector('.menu-mobile')
+        var icon = document.querySelector('.icon')
+        menu.classList.toggle('open')
+        if (menu.classList.contains('open')) {
+            icon.classList.remove('fa-bars')
+            icon.classList.add('fa-xmark')
+        } else {
+            icon.classList.add('fa-bars')
+            icon.classList.remove('fa-xmark')
+        }
+    }
+</script>
+</html>
